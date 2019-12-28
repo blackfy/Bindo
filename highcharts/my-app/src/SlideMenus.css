@@ -1,0 +1,38 @@
+.drag {
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+}
+.drag_box {
+    /* 鼠标移入变成拖拽手势 */
+    cursor: move;
+    z-index: 3000;
+    list-style-type:none
+}
+.slide-wrap{
+  min-height: 100vh;
+  background: #f1f3f5;
+  padding: 15px;
+  width: 160px;
+}
+.slide-wrap .slide-title{
+    margin-bottom: 10px;
+}
+.slide-wrap ul{
+    max-width: 160px;
+    overflow: hidden;
+    margin: 5px 0 10px -40px;
+    list-style:none
+}
+.slide-wrap .line-item{
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+.slide-wrap img{
+    max-width:100%;
+    user-select: none;
+}

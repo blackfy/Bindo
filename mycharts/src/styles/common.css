@@ -1,0 +1,33 @@
+html,body,p,h1,h2,h3,h4,h5,ul,ol,li{
+  padding: 0;
+  margin: 0;
+}
+
+.required-field::before{
+  content: '*';
+  color: #F00;
+  font-size: inherit;
+  margin-right: 5px;
+}
+
+.disable-user-select{
+  -webkit-user-select:none; 
+  -moz-user-select:none; 
+  -ms-user-select:none; 
+  user-select:none;
+}
+ul,ol,li{
+  list-style: none;
+}
+.warning{
+  color: #E6A23C;
+}
+.success{
+  color: #67C23A;
+}
+.danger{
+  color: #F56C6C;
+}
+.info{
+  color: #909399;
+}

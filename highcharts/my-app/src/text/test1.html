@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- 引入3个外部js文件: react2个,babel1个 -->
+    <!-- 引入官方提供的 react源代码 -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+
+ 
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+    function UserGeeting(props) {
+        return <h1>welcome back!</h1>
+    }
+    function GuesGeeting(props) {
+        return <h1>please sign in!</h1>
+    }
+    function Geeting(props){
+        const isLoggedIn=props.isLoggedIn;
+        if(isLoggedIn){
+            return <UserGeeting />
+        }
+        return <GuesGeeting />
+    }
+    function LoginButton(props) {
+        return (
+            <button onClick={props.onClick}>Login</button>
+        )
+    }
+    function LogoutButton(props) {
+        return (
+            <button onClick={props.onClick}>Logout</button>
+        )
+    }
+    class LoginControl extends React.Component{
+        constructor(props){
+            super(props);
+            this.handleLoginClick=this.handleLoginClick.bind(this);
+            this.handleLogoutClick=this.handleLogoutClick.bind(this);
+            this.state={isLoggedIn:false};
+        }
+        handleLoginClick(){
+            this.setState({isLoggedIn:true})
+        }
+        handleLogoutClick(){
+            this.setState({isLoggedIn:false})
+        }
+        render(){
+            const isLoggedIn=this.state.isLoggedIn;
+            let button;
+            if(isLoggedIn){
+                button=<LogoutButton onClick={this.handleLogoutClick} />
+            } else {
+                button=<LoginButton onClick={this.handleLoginClick} />
+            }
+            return (
+                <div>
+                    <Geeting isLoggedIn={isLoggedIn} />
+                    {button}    
+                </div>
+            )
+        }
+    }
+    ReactDOM.render(
+        <LoginControl />,
+        document.getElementById("app")
+    )
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- 引入3个外部js文件: react2个,babel1个 -->
+    <!-- 引入官方提供的 react源代码 -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+
+ 
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+   class MyChild extends React.Component {
+    render() {
+        return <div>
+            {this.props.children}
+        </div>
+    }
+}
+
+class WelcomeDialog extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            date: (new Date()).toLocaleTimeString()
+        }
+        setInterval(() => {
+            // 显示内容全部由父组件控制，子组件不关心父组件显示什么，只关心显示在哪里
+            this.setState({
+                date: (new Date()).toLocaleTimeString()
+            })
+        }, 1000)
+    }
+
+    render() {
+        return <div>
+            <MyChild>
+                {this.state.date}
+            </MyChild>
+        </div>
+    }
+  }
+  ReactDOM.render(
+    <WelcomeDialog />,document.getElementById("app")
+  )
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+.peropty-wrap .peropty-title{
+    padding: 15px 0;
+    border-bottom: 1px solid #CCC;
+};
+.peropty-wrap .peropty-title span{
+    position: relative;
+    padding: 15px;
+}
+.peropty-wrap .peropty-title span ::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: #63868c;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+}
+.peropty-wrap .peropty-item{
+    padding: 15px;
+}
+.peropty-wrap .peropty-item title{
+    margin: 10px 0 5px 0;
+}
