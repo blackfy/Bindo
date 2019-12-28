@@ -10,50 +10,6 @@ class MyApp extends React.Component<any,any>{
         this.state={
             data:this.props.data,
             name:'PieChart',
-            pieProperties:{
-                title: "属性",
-                property: [
-                  {
-                    title: '图例',
-                    value: 'BRAND',
-                    options: [
-                      {
-                        label: '品牌',
-                        value: 'BRAND'
-                      },{
-                        label: '类型',
-                        value: 'TYPE'
-                      },{
-                        label: '换档方式',
-                        value: 'TRANS'
-                      },{
-                        label: '颜色',
-                        value: 'COLOR'
-                      }
-                    ]
-                  },{
-                    title: '值',
-                    value: 0,
-                    options: [
-                      {
-                        label: '数量',
-                        field: 'COUNT',
-                        value: 0
-                      },{
-                        label: '价格',
-                        field: 'PRICE',
-                        value: 1,
-                        format: 'currency'
-                      },{
-                        label: '总价',
-                        field: 'TOTAL',
-                        value: 2,
-                        format: 'currency'
-                      }
-                    ]
-                  },
-                ]
-            },
             showData:[]
         }
         // this.getChartBindData=this.getChartBindData.bind(this)
