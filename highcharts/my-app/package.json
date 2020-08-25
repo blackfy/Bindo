@@ -9,7 +9,7 @@
     "@types/jest": "^24.0.24",
     "@types/node": "^12.12.21",
     "antd": "^3.26.4",
-    "highcharts": "^8.0.0",
+    "highcharts": "^8.1.1",
     "highcharts-react-official": "^2.2.2",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
