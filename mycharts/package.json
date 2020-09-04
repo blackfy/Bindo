@@ -12,7 +12,7 @@
   "dependencies": {
     "devextreme": "^19.2.4",
     "echarts": "^4.5.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
@@ -37,7 +37,7 @@
     "html-webpack-plugin": "^2.30.1",
     "js-xlsx": "^0.8.22",
     "node-notifier": "^5.1.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
     "portfinder": "^1.0.13",
